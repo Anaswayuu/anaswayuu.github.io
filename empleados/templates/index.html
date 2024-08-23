@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="avatar">
+                <img src="{% static 'anaswayuu.png' %}" alt="Avatar">
+            </div>
+            <form method="POST" action="{% url 'index' %}">
+                {% csrf_token %}
+                <div class="textbox">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="username" name="username">
+                </div>
+                <div class="textbox">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" name="password">
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">LOGIN</button>
+            </form>
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

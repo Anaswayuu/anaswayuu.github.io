@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(120deg, #2a9795,#2e9492); /* Updated to use orange and yellow */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-box {
+    background: #f4f8f7c5; /* White background for contrast */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-align: center;
+    width: 300px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 3px solid #146d08; /* Green border */
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+.textbox {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 10px;
+    background: #e5e5e5; /* Neutral background */
+    border: 2px solid #FFC300; /* Yellow border */
+    outline: none;
+    color: #333;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.textbox i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #FF5733; /* Orange icon color */
+}
+
+.remember-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.forgot-password {
+    color: #FF5733; /* Orange link color */
+    text-decoration: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background: #146d08; /* Green button */
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0b3c05; /* Darker green on hover */
+}
+
+.user-info {
+    margin-bottom: 70px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.user-icon {
+    display: block;
+    margin: 0 auto;
+}
+
+.username {
+    color: #f8f9fa;
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#search-input {
+    margin-right: 15px;
+    max-width: 250px;
+    display: inline-block;
+}
